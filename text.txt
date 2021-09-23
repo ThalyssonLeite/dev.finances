@@ -1,0 +1,22 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+:root {
+    font-size: 62.5%;
+    --dark-blue: #363f5f;
+    --green: #49AA26;
+    --light-green: #4ec224;
+    --red: #e92929;
+    --table-font-color: #969CB3;
+    --white: #f0f2f5;
+}

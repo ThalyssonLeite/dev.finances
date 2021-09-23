@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- TITLE -->
+        <title>dev.finance$</title>
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./style.css">
+
+        <!-- SCRIPTS -->
+        <script src="./script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <img id="logo" src="assets/logo.svg" alt="Dev finances logo">
+        </header>
+
+        <main>
+            <div class="container">
+                <section id="balance">
+                    <h2 class="sr-only">Balanço</h2>
+    
+                    <div id="cards">
+                        <div class="card">
+                            <div>
+                                <h3>Entradas</h3>
+                                <img src="./assets/income.svg" alt="Imagem de entradas">
+                            </div>
+                            <p id="incomes"></p>
+                        </div>
+    
+                        <div class="card">
+                            <div>
+                                <h3>Saídas</h3>
+                                <img src="./assets/expense.svg" alt="Imagem de saídas">
+                            </div>
+                            <p id="expenses"></p>
+                        </div>
+    
+                        <div class="card">
+                            <div>
+                                <h3>Total</h3>
+                                <img src="./assets/total.svg" alt="Imagem de total">
+                            </div>
+                            <p id="total"></p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="transaction">
+                    <h2 class="sr-only">Transação</h2>
+    
+                    <a id="newTransaction" href="">+ Nova Transação</a> 
+    
+                    <div id="data-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th>Valor</th>
+                                    <th>Data</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+        
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>dev.finance$</p>
+        </footer>
+
+        <div id="modal-overlay">
+            <div id="modal">
+                <h2>Nova Transação</h2>
+
+                <form action="" method="GET">
+                    <div class="input-group">
+                        <label
+                            class="sr-only"
+                            for="description">Descrição da transação</label>
+                        <input
+                            id="description"
+                            name="description"
+                            placeholder="Descrição"
+                            autocomplete="off"
+                            autofocus
+                            type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label
+                            class="sr-only"
+                            for="amount">Valor da transação</label>
+
+                        <div class="amount-input">
+                            <span>R$</span>
+
+                            <input
+                                id="amount"
+                                name="amount"
+                                placeholder="0.00"
+                                step="0.01"
+                                type="number">
+                        </div>
+                    </div>
+
+                    <small>
+                        Use o sinal - (negativo) para despesas e . (ponto) para casas decimais
+                    </small>
+
+                    <div class="input-group">
+                        <label
+                            class="sr-only"
+                            for="date">Data da transação</label>
+                        <input
+                            id="date"
+                            name="date"
+                            type="date">
+                    </div>
+
+                    <div class="button-group">
+                        <button class="cancel">
+                            Cancelar
+                        </button>
+                        
+                        <button class="save">
+                            Salvar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="delete-modal-overlay">
+            <div class="transaction-index">0</div>
+
+            <div class="modal">
+                <h2>Deseja remover esta transação?</h2>
+                
+                <div class="button-group">
+                    <button class="no">
+                        Não
+                    </button>
+                    
+                    <button class="yes">
+                        Sim
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
