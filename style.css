@@ -278,6 +278,11 @@ footer p {
     pointer-events: auto;
 }
 
+#modal .help {
+    font-size: 1.6rem;
+    opacity: 0.5;
+}
+
 #modal .button-group {
     display: flex;
     align-items: center;

@@ -209,7 +209,8 @@ const Transactions = {
 
 const Utils = {
     formatAmount(value) {
-        value = Number(value.replace(/\.\,/g, "")) * 100
+
+        value = Number(value) * 1000
 
         return value
     },
@@ -233,7 +234,7 @@ const Utils = {
 
         value = String(value).replace(/\D/g, "")
 
-        value = Number(value) / 100
+        value = Number(value) / 1000
         
         value = value.toLocaleString("pt-BR", {
             style: "currency",
@@ -246,7 +247,7 @@ const Utils = {
     formatCurrencyNoSignal(value) {
         value = String(value).replace(/\D/g, "")
 
-        value = Number(value) / 100
+        value = Number(value) / 1000
         
         value = value.toLocaleString("pt-BR", {
             style: "currency",
@@ -270,6 +271,8 @@ const Form = {
             amount: this.amount.value,
             date: this.date.value
         }
+
+        console.log(inputFieldsValue.amount)
 
         return inputFieldsValue
     },
