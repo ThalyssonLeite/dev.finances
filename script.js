@@ -1,6 +1,6 @@
 const newTransactionButton = document.getElementById('newTransaction')
 
-const cancelModalButton = document.querySelector("#modal button.cancel")
+const cancelModalButton = document.querySelector("#modal a.cancel")
 
 const modalForm = document.querySelector("#modal form")
 

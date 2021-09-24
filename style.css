@@ -284,7 +284,7 @@ footer p {
     justify-content: space-between;
 }
 
-#modal .button-group button {
+#modal .button-group input {
     width: 48%;
     height: 5rem;
     cursor: pointer;
@@ -293,6 +293,20 @@ footer p {
     border-radius: 0.4rem;
     
     transition: filter 0.2s;
+}
+
+#modal .button-group a {
+    width: 48%;
+    height: 5rem;
+    cursor: pointer;
+
+    font-size: 1.8rem;
+    border-radius: 0.4rem;
+    
+    transition: filter 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #modal .cancel {
